@@ -1,0 +1,45 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000; /* Solid black background for a sleek look */
+    color: #e9e0e0; /* White text for contrast */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+#countdown-container {
+    padding: 20px 30px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.1); /* Subtle transparency */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Crisp shadow for depth */
+    width: 100%;
+    max-width: 340px; /* Optimal width for mobile devices */
+}
+
+h1 {
+    font-size: 1.6rem; /* Balanced size for mobile */
+    margin-bottom: 20px;
+    font-weight: 600; /* Slightly bolder font */
+}
+
+#countdown {
+    font-size: 2.2rem; /* Large enough for easy readability */
+    font-weight: bold;
+    letter-spacing: 2px; /* Spacing for a modern touch */
+    margin-top: 10px;
+}
+
+/* Simple fade-in effect for a smooth appearance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#countdown-container {
+    animation: fadeIn 1s ease-out;
+}
