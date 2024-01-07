@@ -1,0 +1,72 @@
+/* Reset the default margins and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling for the entire document */
+}
+
+/* Set up the viewport to disable user scaling and set the width to match the device's width */
+meta[name="viewport"] {
+    touch-action: manipulation;
+    width: device-width, initial-scale=1.0;
+}
+
+/* Common styles for all slides */
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+/* Specific styles for Slide 1 */
+#slide1 {
+    background-image: url('/data/slide1_back.png'); /* Adjust path as needed */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay for Slide 1 to enhance text readability */
+#slide1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay, you can adjust opacity as needed */
+    z-index: 1; /* Ensure it's above the background image but below the text */
+}
+
+/* Title styles for Slide 1 */
+#slide1 .title {
+    font-size: 6vw; /* Responsive font size for mobile */
+    color: #ffffff; /* White color for better visibility */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for legibility */
+    position: relative; /* Ensure the title is above the overlay */
+    z-index: 2;
+    margin-top: -14vh;
+}
+
+/* Message styles for Slide 1 */
+#slide1 .message {
+    font-size: 4vw; /* Responsive font size for mobile */
+    color: #ffffff; /* White color for better visibility */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Text shadow for legibility */
+    margin-top: 20px; /* Space between title and message */
+    position: relative; /* Ensure the message is above the overlay */
+    z-index: 2;
+    text-align: justify; /* Justify the text for even alignment on both sides */
+    text-justify: inter-word; /* Improve spacing between words */
+}
+
+/* Content container styles for Slide 1 */
+#slide1 .content {
+    max-width: 90%; /* Limit the width of the content */
+    padding: 10px; /* Padding for the content */
+    position: relative; /* Ensure the content container is above the overlay */
+    z-index: 2;
+}
+

@@ -1,0 +1,69 @@
+/* Reset the default margins and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling for the entire document */
+}
+
+/* Set up the viewport to disable user scaling and set the width to match the device's width */
+meta[name="viewport"] {
+    touch-action: manipulation;
+    width: device-width, initial-scale=1.0;
+}
+
+/* Common styles for all slides */
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+#slide3 .title2 {
+    font-size: 6vw; /* Responsive font size for mobile */
+    color: #ffffff; /* White color for better visibility */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for legibility */
+    position: relative; /* Ensure the title is above the overlay */
+    z-index: 2;
+    margin-top: -40vh;
+}
+
+
+#slide3 {
+    background-image: url('/data/slide2_background.png'); /* Adjust path as needed */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+
+.flame {
+    position: absolute;
+    width: 8vw; /* Example relative unit */
+    height: 8vw; /* Example relative unit */
+    background: url('/data/update_flame.gif') no-repeat center center;
+    background-size: contain;
+    animation-fill-mode: forwards;
+}
+
+#flame1 { 
+    top: 38.5%; /* Example percentage */
+    left: 38.5%; /* Example percentage */
+}
+#flame2 { 
+    top: 38%; /* Adjust percentage */
+    left: 50%; /* Adjust percentage */
+}
+
+/* Add this inside your styles.css file */
+
+@keyframes fadeOut {
+    to { opacity: 0; }
+}
+
+.flame-out {
+    animation: fadeOut 1s ease-in-out forwards; /* 'forwards' will keep the flame at 0 opacity after the animation ends */
+}
